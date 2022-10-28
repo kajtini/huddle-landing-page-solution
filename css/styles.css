@@ -1,0 +1,161 @@
+:root {
+  --clr-primary-violet: hsl(257, 40%, 49%);
+  --clr-primary-soft: hsl(300, 69%, 71%);
+
+  --font-headings: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: hsl(0, 0%, 100%);
+  font-family: var(--font-body);
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--clr-primary-violet);
+}
+
+.page {
+  padding: 2rem 2.2rem;
+}
+
+.page__logo {
+  height: 2rem;
+  margin-bottom: 3rem;
+}
+
+.page__stats-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.page__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-headings);
+}
+
+.page__description {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.5;
+  font-family: var(--font-body);
+}
+
+.page__register-btn:link,
+.page__register-btn:visited {
+  color: var(--clr-primary-violet);
+}
+
+.page__register-btn:link {
+  border-radius: 30px;
+  padding: 0.6rem 5rem;
+  text-decoration: none;
+  background-color: white;
+  cursor: pointer;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-wrapper {
+  margin-top: 5rem;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  padding: 0.3rem 0.3rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: var(--clr-primary-soft);
+  border-color: var(--clr-primary-soft);
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 600px) {
+  .page__title {
+    margin-inline: auto;
+    font-size: 2.8rem;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    text-align: left;
+    gap: 3rem;
+  }
+
+  .page {
+    padding: 3.5rem 0;
+  }
+
+  .page__logo {
+    height: 3.5rem;
+  }
+
+  .page__stats-img {
+    height: 33rem;
+    margin: 0;
+  }
+
+  .page__content {
+    padding-top: 3.5rem;
+  }
+
+  .page__title {
+    font-size: 2.5rem;
+  }
+
+  .page__description {
+    margin: 0 0 2rem 0;
+  }
+
+  .page__register-btn:link {
+    font-size: 18px;
+    padding: 0.8rem 3.2rem;
+  }
+
+  .icon-wrapper {
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .icon {
+    padding: 8px 8px;
+  }
+}
